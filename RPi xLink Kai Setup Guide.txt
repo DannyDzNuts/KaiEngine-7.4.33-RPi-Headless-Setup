@@ -21,7 +21,7 @@ Run following commands;
 	cd
 	sudo apt-get update
 	sudo apt-get install nano wget screen
-	wget http://cdn.teamxlink.co.uk/binary/kaiEngine-7.4.33-rev767.headless.ARM.tar.gz   ***(REPLACE VERSION TO MOST CURRENT BUILD)***
+	wget http://cdn.teamxlink.co.uk/binary/kaiEngine-7.4.33-rev767.headless.ARM.tar.gz   ***(REPLACE VERSION WITH MOST CURRENT BUILD)***
 	mkdir kai
 	mv kaiEngine-7.4.33-rev767.headless.ARM.tar.gz ~/kai
 	cd kai
