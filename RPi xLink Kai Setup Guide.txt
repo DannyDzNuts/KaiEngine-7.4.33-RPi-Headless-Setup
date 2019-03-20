@@ -1,0 +1,89 @@
+Fresh Install Setup
+(Requires Restart After Crash)
+
+
+Setting Up Networking
+---------------------K&M Required
+
+Set Network Region
+Setup Network Connection
+Set 'Wait for Network'
+Enable SSH
+
+
+
+
+Downloading Kai & Support Packages
+----------------------------------SSH (PuTTY)
+
+Run following commands;
+	passwd
+	cd
+	sudo apt-get update
+	sudo apt-get install nano wget screen
+	wget http://cdn.teamxlink.co.uk/binary/kaiEngine-7.4.33-rev767.headless.ARM.tar.gz   ***(REPLACE VERSION TO MOST CURRENT BUILD)***
+	mkdir kai
+	mv kaiEngine-7.4.33-rev767.headless.ARM.tar.gz ~/kai
+	cd kai
+	tar zxvf kaiEngine-7.4.33-rev767.headless.ARM.tar.gz
+	cd kaiEngine-7.4.33
+	mv kaiengine_arm ~/kai
+	mv README ~/kai
+	mv runforever ~/kai
+
+
+
+
+
+Setting Up Kai
+--------------SSH (PuTTY)
+
+Run following commands;
+	cd
+	sudo nano .bashrc
+
+Add to bottom of file before exit0;
+	sudo ~/kai/kaiengine_arm
+
+Press CTRL+X, Y, ENTER
+
+
+
+
+Verifing Setup
+--------------SSH (PuTTY)
+
+Run following commands;
+	sudo reboot
+	
+Restart PuTTY after reboot completes
+
+Run following commands;
+	ps -a
+	
+Verify kaiengine_arm is running
+
+
+
+
+Setting Up Kai (Cont.)
+----------------------Browser & SSH (PuTTY)
+
+
+Using Browser;
+	Login to Kai services using WUI (RPi's Local Network Address on port 34522)
+	Select 'Configuration' on header
+	Select checkbox for 'Auto Login'
+	Enter UN & PW for Kai services
+	Select Save
+
+Using PuTTY;
+	sudo reboot
+
+
+
+
+Setting Up Networking Bridge
+----------------------------SSH (PuTTY)
+
+Still working on this. Raspbian doesn't seem to easily support network bridging... :T Hallllllp
